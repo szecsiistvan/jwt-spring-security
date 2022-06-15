@@ -1,4 +1,4 @@
-package com.example.jwtspringsecurity.models;
+package com.example.jwtspringsecurity.models.dtos;
 
 import java.io.Serializable;
 

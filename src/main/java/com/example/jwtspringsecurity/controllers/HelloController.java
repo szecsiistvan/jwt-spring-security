@@ -1,11 +1,9 @@
 package com.example.jwtspringsecurity.controllers;
 
 import com.example.jwtspringsecurity.MyUserDetailsService;
-import com.example.jwtspringsecurity.models.AuthenticationRequest;
-import com.example.jwtspringsecurity.models.AuthenticationResponse;
+import com.example.jwtspringsecurity.models.dtos.AuthenticationRequest;
+import com.example.jwtspringsecurity.models.dtos.AuthenticationResponse;
 import com.example.jwtspringsecurity.util.JwtUtil;
-import java.util.HashMap;
-import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
