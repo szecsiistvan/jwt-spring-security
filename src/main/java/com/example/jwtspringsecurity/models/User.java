@@ -20,14 +20,17 @@ public class User {
 
   private String roles;
 
+  private boolean active;
+
   public User() {
   }
 
-  public User(Long id, String userName, String password, String roles) {
+  public User(Long id, String userName, String password, String roles, boolean isActive) {
     this.id = id;
     this.userName = userName;
     this.password = password;
     this.roles = roles;
+    this.active = isActive;
   }
 
   public Long getId() {
@@ -60,5 +63,13 @@ public class User {
 
   public void setRoles(String roles) {
     this.roles = roles;
+  }
+
+  public boolean isActive() {
+    return active;
+  }
+
+  public void setActive(boolean active) {
+    this.active = active;
   }
 }

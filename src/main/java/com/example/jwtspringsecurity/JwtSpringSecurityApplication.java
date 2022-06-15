@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 public class JwtSpringSecurityApplication implements CommandLineRunner {
@@ -23,7 +24,7 @@ public class JwtSpringSecurityApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    User user = new User(1L, "pista", "maci", "USER");
+    User user = new User(1L, "pista", "maci", "USER_ROLE", true);
     userRepository.save(user);
   }
 }

@@ -26,6 +26,13 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     auth.userDetailsService(myUserDetailsService);
   }
 
+
+  // TODO: 2022. 06. 15. this method has to be implemented
+//  @Bean
+//  public PasswordEncoder passwordEncoder() {
+//    return NoOpPasswordEncoder.getInstance();
+//  }
+
   @Bean
   public PasswordEncoder passwordEncoder() {
     return NoOpPasswordEncoder.getInstance();
@@ -35,6 +42,12 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Bean
   public AuthenticationManager authenticationManagerBean() throws Exception {
     return super.authenticationManagerBean();
+  }
+
+  // TODO: 2022. 06. 15. maybe this is not needed
+  @Override
+  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    auth.userDetailsService(myUserDetailsService);
   }
 
   @Override
