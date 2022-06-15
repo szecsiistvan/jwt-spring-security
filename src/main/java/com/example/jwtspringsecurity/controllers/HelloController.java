@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class HelloWorldController {
+class HelloController {
 
   @Autowired
   private AuthenticationManager authenticationManager;
@@ -31,6 +31,11 @@ class HelloWorldController {
   @GetMapping({ "/hello" })
   public String firstPage() {
     return "Hello World";
+  }
+
+  @GetMapping({ "/login" })
+  public String loginPage() {
+    return "This should be a public login page";
   }
 
   @PostMapping(value = "/authenticate")
